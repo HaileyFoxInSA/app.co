@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "The Blockstack Team",
   "bugs": {
-    "url": "https://github.com/blockstackpbc/app.co/issues"
+    "url": "https://github.com/blockstack/app.co/issues"
   },
   "prettier": "@blockstack/prettier-config",
   "dependencies": {
@@ -163,7 +163,7 @@
     "typescript": "^3.6.3",
     "webpack-cli": "^3.3.10"
   },
-  "homepage": "https://github.com/blockstackpbc/app.co#readme",
+  "homepage": "https://github.com/blockstack/app.co#readme",
   "keywords": [
     "dapps"
   ],
@@ -171,7 +171,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/blockstackpbc/app.co.git"
+    "url": "git+ssh://git@github.com/blockstack/app.co.git"
   },
   "scripts": {
     "build": "next build",
