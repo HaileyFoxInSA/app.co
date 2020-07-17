@@ -36,8 +36,6 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SEMANTIC_RELEASE_PACKAGE: gh-actions-test
         with:
-          # TODO: Change this when ready
-          dry_run: true
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release/git
@@ -45,7 +43,6 @@ jobs:
 
       - name: Tag and Push Image
         uses: docker/build-push-action@v1
-        if: steps.semantic.outputs.new_release_published == 'true'
         with:
           repository: ${{ env.IMAGE_NAME }}
           username: ${{ secrets.QUAY_USERNAME }}
@@ -54,8 +51,7 @@ jobs:
           tags: ${{ steps.semantic.outputs.new_release_version }}
           tag_with_ref: true
           add_git_labels: true
-          # TODO: Change this when ready
-          push: false
+          push: true
 
       - name: Notify slack success
         if: success()
